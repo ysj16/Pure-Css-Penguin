@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    .box{width:500px;height: 500px;margin:0 auto;position:relative;}
+    .face{
+        position:relative;
+        box-sizing: border-box;
+        width:100px;
+        height: 80px;
+        background-color: #19161F;
+        border-top-left-radius: 55px 50px;
+        border-top-right-radius:55px 50px;
+        border-bottom-left-radius:40px;
+        border-bottom-right-radius:40px;
+        box-shadow:0 0 2px rgba(0,0,0,0.8);
+        border:1px solid #000;
+    }
+    .eyes{
+        position:absolute;
+        width:15px;
+        height: 22px;
+        background-color:#fff;
+        border-radius:15px/22px;
+    }
+    .eyesL{left:30px;top:20px;animation:blink  5s linear infinite;}
+    .eyesR{right:30px;top:20px;animation:blink  5s linear infinite;}
+    .eyeBall{
+        position: absolute;
+        width:7px;
+        height:11px;
+        background-color: #000;
+        border-radius: 7px/11px;
+    }
+    .eyeBallL{right:2px;top:5px}
+    .eyeBallL:before{
+        content:"";
+        position:absolute;
+        width:3px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #fff;;
+        right:1px;
+        top:3px;
+    }
+    .eyeBallL:after{
+        content:"";
+        position:absolute;
+        width:1px;
+        height: 1px;
+        background-color: rgba(255,255,255,0.8);;
+        left:2px;
+        bottom:2px;
+    }
+    .eyeBallR{left:2px;top:5px;}
+    .eyeBallR:before{
+        content:"";
+        position:absolute;
+        width:3px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #fff;;
+        left:1px;
+        top:3px;
+    }
+    .eyeBallR:after{
+        content:"";
+        position:absolute;
+        width:1px;
+        height: 1px;
+        background-color: rgba(255,255,255,0.8);;
+        right:2px;
+        bottom:2px;
+    }
+    .mouth{
+        position:absolute;
+        width:60px;
+        height: 24px;
+        border-radius:60px/24px;
+        background-color: #FD950E;
+        top:45px;
+        left:20px;
+    }
+    .mouthTop{
+        position: absolute;
+        width:40px;
+        height: 24px;
+        border-radius: 40px/24px;
+        background-color: #FD950E;
+        top:0px;
+        left:10px;
+        box-shadow: 0 4px 0 #19161f;
+    }
+    .scarf{
+        position:relative;
+        width:100px;
+        height: 42px;
+        border:1px solid red;
+        border:none;
+        border-radius:62px/26px;
+        box-shadow: 0px 17px 0px rgba(255,32,0,1), 0px 18px 2px rgba(0,0,0,0.8);
+        margin-top:-49px;
+    }
+    .body{
+        position: relative;
+        width:110px;
+        height: 110px;
+        border-radius: 55px;
+        border:1px solid #000;
+        background-color: #19161f;
+        margin-top:-34px;
+        margin-left:-5px;
+        box-shadow:0 0 2px rgba(0,0,0,0.8);
+        z-index: -1;
+    }
+    .bodyIn{
+        position: absolute;
+        width:90px;
+        height: 90px;
+        border-radius: 45px;
+        background-color: #fff;
+        margin-top:16px;
+        margin-left:11px;
+        z-index: -1;
+    }
+    .hand{
+        position: absolute;
+        width:60px;
+        height: 20px;
+        border-radius: 60px/20px;
+        background-color: #19161f;
+        z-index: -2;
+    }
+    .handL{top:42px;left:-27px;transform:rotateZ(-65deg);}
+    .handR{top:42px;right: -27px;transform:rotateZ(65deg);}
+    .leg{
+        position: absolute;
+        width:50px;
+        height: 30px;
+        border-radius: 50px/30px;
+        background-color: #ff950e;
+        border:1px solid #82320A;
+        box-shadow:0 0 2px rgba(130,50,10);
+        z-index: -2;
+    }
+    .legL{
+        margin-left:-5px;
+        margin-top:-25px;
+    }
+    .legR{
+        margin-left:56px;
+        margin-top:-25px;
+    }
+    @keyframes blink{
+        0%{
+            clip:rect(0px,15px,22px,0px)
+        }
+        1%{
+            clip:rect(11px,15px,11px,0px)
+        }
+        2%{
+            clip:rect(0px,15px,22px,0px)
+        }
+        4%{
+            clip:rect(11px,15px,11px,0px)
+        }
+        5%{
+            clip:rect(0px,15px,22px,0px)
+        }
+        100%{
+            clip:rect(0px,15px,22px,0px)
+        }
+    }
+</style>
+<body>
+<div class="box">
+    <div class="face">
+        <div class="eyes eyesL">
+            <div class="eyeBall eyeBallL"></div>
+        </div>
+        <div class="eyes eyesR">
+            <div class="eyeBall eyeBallR"></div>
+        </div>
+        <div class="mouth">
+            <div class="mouthTop"></div>
+        </div>
+    </div>
+    <div class="scarf"></div>
+    <div class="body">
+        <div class="bodyIn"></div>
+        <div class="hand handL"></div>
+        <div class="hand handR"></div>
+    </div>
+    <div class="leg legL"></div>
+    <div class="leg legR"></div>
+</div>
+</body>
+</html>
